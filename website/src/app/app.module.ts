@@ -22,6 +22,9 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { BaseComponent } from './content/base/base.component';
 
+// directives
+import { InterestDirective } from './content/interest/interest.directive';
+
 @NgModule({
 	entryComponents: [
 	],
@@ -33,7 +36,10 @@ import { BaseComponent } from './content/base/base.component';
 
 		// components
 		AppComponent,
-		BaseComponent
+		BaseComponent,
+
+		// directives
+		InterestDirective
 	],
 	imports: [
 		// angular

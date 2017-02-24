@@ -1,58 +1,53 @@
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `angular-cli.json`.
-
 export const environment = {
-	production: true,
-	theme: 'red',
+	production: false,
+	theme: 'green',
 	photoUrl: '/assets/images/profile-img.jpg',
 	title: 'Title',
 	name: 'Your Name',
-	subTitle: 'Your Sub Title',
-	description: 'A story about yourself',
+	subTitle: 'Your Title',
+	description: 'Something about you',
 	basicInfo: {
-		birthDay: '1995-30-11',
+		birthDay: '9999-99-99',
 		nationality: 'English',
 		languages: 'English (mother tongue)'
 	},
 	phoneNumbers: [{
-		name: 'Work',
-		value: '(0) (31) 6 18 17 01 70'
+		name: 'Personal',
+		value: '(0) (31) 6 12 34 56 78'
 	}],
 	emails: [{
-		name: 'Work',
-		value: 'mail@example.com'
+		name: 'Personal',
+		value: 'email@example.com'
 	}],
 	address: {
-		streetAndNumber: '12th street #12',
+		streetAndNumber: '21th Street #21',
 		city: 'City, State',
 		postcode: '1234AB'
 	},
 	skills: [{
-		name: 'SQL',
-		percentage: 55
+		name: 'Skill',
+		percentage: 50
 	}],
 	workExperience: [{
-		title: 'UI/UX Designer',
-		company: 'Academy',
-		timespan: 'JAN 2013 - DEC 2013',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+		title: 'Title',
+		company: 'Company',
+		timespan: 'FROM - TILL',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque volutpat erat nec mollis. Aliquam vulputate, velit sed lobortis ullamcorper, elit metus tempor quam, at consectetur leo lacus a mauris.'
 	}],
 	education: [{
-		title: 'Art & Multimedia',
-		school: 'Oxford University',
-		timespan: 'JAN 2013 - DEC 2013',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+		title: 'Title',
+		school: 'School',
+		timespan: 'FROM - TILL',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque volutpat erat nec mollis. Aliquam vulputate, velit sed lobortis ullamcorper, elit metus tempor quam, at consectetur leo lacus a mauris.'
 	}],
 	interests: [{
-		name: "Photography",
-		icon: "fa-camera"
+		name: "Beers",
+		icon: "fa-beer"
 	}],
 	social: [{
 		name: "Facebook",
 		icon: "fa-facebook",
-		url: "http://facebook.com"
+		url: "https://www.facebook.com"
 	}],
-	extraUrls: ['http://example.com']
+	extraUrls: ['https://example.com']
 };

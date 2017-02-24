@@ -93,7 +93,7 @@
 					</div>
 				</div>
 				<!-- SKILLS -->
-				<div class="col l12 m12 s12  skills sidebar-item" *ngIf="environment.skills.length">
+				<div class="col l12 m12 s12  skills sidebar-item" *ngIf="environment.skills && environment.skills.length">
 					<div class="row">
 						<div class="col m12 l3 s12 icon">
 							<i class="fa fa-calendar-o"></i> <!-- icon -->
@@ -118,7 +118,7 @@
 
 		<section class="col s12 m12 l8 section">
 			<div class="row">
-				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.workExperience.length">
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.workExperience && environment.workExperience.length">
 					<div class="section-icon col s12 m12 l2">
 						<i class="fa fa-suitcase"></i>
 					</div>
@@ -137,7 +137,7 @@
 				 Education
 				==========================================-->
 
-				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.workExperience.length">
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.education && environment.education.length">
 					<div class="section-icon col s12 m12 l2">
 						<i class="fa fa-graduation-cap"></i>
 					</div>
@@ -156,7 +156,7 @@
 					  Intertests
 				==========================================-->
 
-				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.interests.length > 0">
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.interests && environment.interests.length > 0">
 					<div class="section-icon col s12 m12 l2">
 						<i class="fa fa-plane"></i>
 					</div>
@@ -164,7 +164,7 @@
 						<h2>Interestes </h2>
 						<ul> <!-- interetsr icon start -->
 							<li *ngFor="let interest of environment.interests">
-								<i [class]="'fa ' + interest.icon" mdTooltipPosition="above" [mdTooltip]="interest.name"></i>
+								<interest [interest]="interest"></interest>
 							</li>
 						</ul> <!-- interetsr icon end -->
 					</div>
@@ -174,7 +174,7 @@
 					  Socials
 				==========================================-->
 
-				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.social.length > 0">
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.social && environment.social.length > 0">
 					<div class="section-icon col s12 m12 l2">
 						<i class="fa fa-bullhorn"></i>
 					</div>
@@ -194,7 +194,7 @@
 				  portfolio Website
 				==========================================-->
 
-				<div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s" *ngIf="environment.extraUrls.length">
+				<div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s" *ngIf="environment.extraUrls && environment.extraUrls.length">
 					<div class="col s12 m12 l10 website right" >
 						<div class="row">
 							<div class="col s12 m12 l6" *ngFor="let extraUrl of environment.extraUrls">
