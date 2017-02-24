@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  jurien-cv:
+  resume:
     image: superbuddy/ng-cli-nginx
     env_file: 
       - .env
