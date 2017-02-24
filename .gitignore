@@ -1,0 +1,9 @@
+sdk
+docker-compose/.env
+*/**/.env
+
+website/\.config/configstore/ember-cli\.json
+
+website/\.config/configstore/typings\.json
+
+website/\.config/configstore/update-notifier-typings\.json
