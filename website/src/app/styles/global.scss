@@ -1,0 +1,83 @@
+@import "variables";
+@import "loading";
+
+@import '~@angular/material/core/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$green-app-primary: mat-palette($mat-green);
+$green-app-accent:  mat-palette($mat-lime, A200, A100, A400);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$green-app-theme: mat-light-theme($green-app-primary, $green-app-primary);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($green-app-theme);
+
+// body, html {
+// 	padding:0;
+// 	margin:0;
+// }
+
+
+.skill {
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.mat-progress-bar {
+	height: 3px !important;
+
+	.mat-progress-bar-buffer {
+		background: rgba(0, 0, 0, 0.2) !important;
+	}
+
+	.mat-progress-bar-fill {
+		&:after {
+			background: #fff !important;
+		}
+	}
+}
+
+.sidebar .info {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.interests {
+	ul {
+		li {
+			.fa {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.green-theme {
+	@import "colors/green";
+}
+
+.lime-theme {
+	@import "colors/lime";
+}
+
+.orange-theme {
+	@import "colors/orange";
+}
+
+.purple-theme {
+	@import "colors/purple";
+}
+
+.red-theme {
+	@import "colors/red";
+}

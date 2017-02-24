@@ -1,0 +1,209 @@
+<!-- Start Container-->
+<div [class]="'container ' + environment.theme + '-theme'">
+	<!-- row -->
+	<div class="row">
+	<!-- =========================================
+				   SIDEBAR
+	==========================================-->
+		<!-- Start Sidebar -->
+		<aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+			<!--  Sidebar row -->
+			<div class="row">
+				<!--  top section   -->
+				<div class="heading">
+					<!-- ====================
+							  IMAGE
+					==========================-->
+					<div class="feature-img">
+						<img *ngIf="environment.photoUrl" [src]="environment.photoUrl" class="responsive-img" alt="">
+					</div>
+					<!-- ========================================
+							   NAME AND TAGLINE
+					==========================================-->
+					<div class="title col s12 m12 l9 right  wow fadeIn" data-wow-delay="0.1s">
+						<h2 *ngIf="environment.name">{{ environment.name }}</h2> <!-- title name -->
+						<span *ngIf="environment.subTitle">{{ environment.subTitle }}</span>  <!-- tagline -->
+					</div>
+				</div>
+				 <!-- sidebar info -->
+				<div class="col l12 m12 s12 sort-info sidebar-item" *ngIf="environment.description && environment.description.length">
+					<div class="row">
+						<div class="col m12 s12 l3 icon"> <!-- icon -->
+						   <i class="fa fa-user"></i>
+						</div>
+						<div class="col m12 s12 l9 info wow fadeIn a1" data-wow-delay="0.1s" > <!-- text -->
+							<div class="section-item-details">
+								<p [innerHtml]="environment.description"></p>
+								<br>
+								<b>birth day:</b><p [innerHtml]="environment.basicInfo.birthDay"></p>
+								<b>Nationality:</b><p [innerHtml]="environment.basicInfo.nationality"></p>
+								<b>Languages:</b><p [innerHtml]="environment.basicInfo.languages"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MOBILE NUMBER -->
+				<div class="col l12 m12 s12  mobile sidebar-item" *ngIf="environment.phoneNumbers">
+					<div class="row">
+						<div class="col m12 s12 l3 icon">
+							<i class="fa fa-phone"></i> <!-- icon -->
+						</div>
+						<div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s">
+							<div class="section-item-details">
+								<div class="personal" *ngFor="let phoneNumber of environment.phoneNumbers">
+									<h4><a [href]="'tel:' + phoneNumber.value">{{ phoneNumber.value }}</a></h4> <!-- Number -->
+									<span>{{ phoneNumber.name }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  EMAIL -->
+				<div class="col l12 m12 s12  email sidebar-item" *ngIf="environment.emails">
+					<div class="row">
+						<div class="col m12 s12 l3 icon">
+							<i class="fa fa-envelope"></i> <!-- icon -->
+						</div>
+						<div class="col m12 s12 l9 info wow fadeIn a3" data-wow-delay="0.3s">
+							<div class="section-item-details">
+								<div class="personal" *ngFor="let mail of environment.emails">
+									<h4><a [href]="'mailto:' + mail.value">{{ mail.value }}</a></h4> <!-- Email -->
+									<span>{{ mail.name }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ADDRESS  -->
+				<div class="col l12 m12 s12  address sidebar-item" *ngIf="environment.address">
+					<div class="row">
+						<div class="col l3 m12  s12 icon">
+							<i class="fa fa-home"></i> <!-- icon -->
+						</div>
+						<div class="col m12 s12 l9 info wow fadeIn a4" data-wow-delay="0.4s">
+							<div class="section-item-details">
+								<div class="address-details"> <!-- address  -->
+									<h4>{{ environment.address.streetAndNumber }}<br>
+									{{ environment.address.city }}<br>
+									<span>{{ environment.address.postcode }}</span></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- SKILLS -->
+				<div class="col l12 m12 s12  skills sidebar-item" *ngIf="environment.skills.length">
+					<div class="row">
+						<div class="col m12 l3 s12 icon">
+							<i class="fa fa-calendar-o"></i> <!-- icon -->
+						</div>
+						 <!-- Skills -->
+						<div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+							<h3>Professional Skills </h3>
+
+							<div class="skill" *ngFor="let skill of environment.skills">
+								<span>{{ skill.name }}</span>
+								<md-progress-bar [value]="skill.percentage"></md-progress-bar>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>   <!-- end row -->
+		</aside><!-- end sidebar -->
+
+		<!-- =========================================
+		   Work experiences
+		==========================================-->
+
+		<section class="col s12 m12 l8 section">
+			<div class="row">
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.workExperience.length">
+					<div class="section-icon col s12 m12 l2">
+						<i class="fa fa-suitcase"></i>
+					</div>
+					<div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+						<h2>Work Experience</h2>
+
+						<div class="custom-content-wrapper wow fadeIn a2" *ngFor="let experience of environment.workExperience">
+							<h3>{{ experience.title }} <span>@{{ experience.company }}</span></h3>
+							<span>{{ experience.timespan }}</span>
+							<p *ngIf="experience.description" [innerHtml]="experience.description"></p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ========================================
+				 Education
+				==========================================-->
+
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.workExperience.length">
+					<div class="section-icon col s12 m12 l2">
+						<i class="fa fa-graduation-cap"></i>
+					</div>
+					<div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+						<h2>Education </h2>
+
+						<div class="custom-content-wrapper wow fadeIn a2" *ngFor="let education of environment.education">
+							<h3>{{ education.title }} <span>@{{ education.school }}</span></h3>
+							<span>{{ education.timespan }}</span>
+							<p *ngIf="education.description" [innerHtml]="education.description"></p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ========================================
+					  Intertests
+				==========================================-->
+
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.interests.length > 0">
+					<div class="section-icon col s12 m12 l2">
+						<i class="fa fa-plane"></i>
+					</div>
+					<div class="interests col s12 m12 l10 wow fadeIn" data-wow-delay="0.1s">
+						<h2>Interestes </h2>
+						<ul> <!-- interetsr icon start -->
+							<li *ngFor="let interest of environment.interests">
+								<i [class]="'fa ' + interest.icon" mdTooltipPosition="above" [mdTooltip]="interest.name"></i>
+							</li>
+						</ul> <!-- interetsr icon end -->
+					</div>
+				</div>
+
+				<!-- ========================================
+					  Socials
+				==========================================-->
+
+				<div class="section-wrapper z-depth-1" data-wow-delay="0.1s" *ngIf="environment.social.length > 0">
+					<div class="section-icon col s12 m12 l2">
+						<i class="fa fa-bullhorn"></i>
+					</div>
+					<div class="interests col s12 m12 l10 wow fadeIn" data-wow-delay="0.1s">
+						<h2>Social-media </h2>
+						<ul> <!-- interetsr icon start -->
+							<li *ngFor="let social of environment.social">
+								<a [href]="social.url" [target]="social.name">
+									<i [class]="'fa ' + social.icon" mdTooltipPosition="above" [mdTooltip]="social.name"></i>
+								</a>
+							</li>
+						</ul> <!-- interetsr icon end -->
+					</div>
+				</div>
+
+				<!-- =======================================
+				  portfolio Website
+				==========================================-->
+
+				<div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s" *ngIf="environment.extraUrls.length">
+					<div class="col s12 m12 l10 website right" >
+						<div class="row">
+							<div class="col s12 m12 l6" *ngFor="let extraUrl of environment.extraUrls">
+							   <span><a [href]="extraUrl" target="_BLANK">{{ extraUrl }}</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- end row -->
+		</section><!-- end section -->
+	</div> <!-- end row -->
+</div>  <!-- end container -->
