@@ -81,3 +81,19 @@ $green-app-theme: mat-light-theme($green-app-primary, $green-app-primary);
 .red-theme {
 	@import "colors/red";
 }
+
+.copyright {
+	text-align: right;
+
+	a {
+		color: #898989;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.love {
+		color: red;
+	}
+}
