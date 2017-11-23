@@ -3,6 +3,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // routes
 import { AppRoutes }  from './app.routes';
@@ -15,7 +16,7 @@ import { ValidationService,
 import { ShortenNumberPipe } from './pipes'
 
 // dependencies
-import { MaterialModule } from '@angular/material';
+import { MatTooltipModule, MatProgressBarModule } from '@angular/material';
 import 'hammerjs';
 
 // components
@@ -49,9 +50,11 @@ import { InterestDirective } from './content/interest/interest.directive';
 		RouterModule,
 		HttpModule,
 		JsonpModule,
+		BrowserAnimationsModule,
 
 		// dependencies
-		MaterialModule,
+		MatTooltipModule,
+		MatProgressBarModule,
 
 		// additional routes, load in last. (Inccludes 404 for any additional weird page)
 		RouterModule.forRoot(AppRoutes)

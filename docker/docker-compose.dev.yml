@@ -1,0 +1,19 @@
+version: '2'
+services:
+  angular:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ../
+      args:
+        - environment=development
+        - lint=false
+    environment:
+      - APP_DEBUG=true
+      - NODE_ENV=development
+      - "AOT=${AOT}"
+      - "LINT=${LINT}"
+    ports:
+      - "${EXPOSED_DEV_PORT}:4200"
+      - 49152:49152
+    volumes:
+      - "../:/opt/app"

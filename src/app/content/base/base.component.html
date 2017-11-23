@@ -104,7 +104,7 @@
 
 							<div class="skill" *ngFor="let skill of environment.skills">
 								<span>{{ skill.name }}</span>
-								<md-progress-bar [value]="skill.percentage"></md-progress-bar>
+								<mat-progress-bar [value]="skill.percentage"></mat-progress-bar>
 							</div>
 						</div>
 					</div>
@@ -183,7 +183,7 @@
 						<ul> <!-- interetsr icon start -->
 							<li *ngFor="let social of environment.social">
 								<a [href]="social.url" [target]="social.name">
-									<i [class]="'fa ' + social.icon" mdTooltipPosition="above" [mdTooltip]="social.name"></i>
+									<i [class]="'fa ' + social.icon" matTooltipPosition="above" [matTooltip]="social.name"></i>
 								</a>
 							</li>
 						</ul> <!-- interetsr icon end -->
