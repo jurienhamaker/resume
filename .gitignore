@@ -32,6 +32,9 @@ testem.log
 /typings
 .npm
 
+.env
+Dockerfile
+
 # e2e
 /e2e/*.js
 /e2e/*.map
