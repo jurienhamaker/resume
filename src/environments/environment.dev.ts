@@ -7,7 +7,7 @@ export const environment = {
 	subTitle: 'Web & Backend Programmer',
 	description: 'Tattoo loving, social, chatty & a code fanatic. Started building websites since an age of 12, ended up programming anything that came to mind.',
 	basicInfo: {
-		birthDay: '1995-30-11',
+		birthDay: '30-11-1995',
 		nationality: 'Dutch',
 		languages: 'Dutch (mother tongue), English (fluent)'
 	},
@@ -79,6 +79,11 @@ export const environment = {
 		title: 'VMBO TL',
 		school: 'Het CCC Zwolle',
 		timespan: 'SEPT 2008 - JUN 2010'
+	}],
+	projects: [{
+		name: 'Cynthia Vos',
+		logoUrl: "https://cynthia-vos.com/wp-content/uploads/2018/03/Color@100px-1.png",
+		url: "https://cynthia-vos.com"
 	}],
 	interests: [{
 		name: "Beers",

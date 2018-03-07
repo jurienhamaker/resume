@@ -40,6 +40,11 @@ export const environment = {
 		timespan: 'FROM - TILL',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque volutpat erat nec mollis. Aliquam vulputate, velit sed lobortis ullamcorper, elit metus tempor quam, at consectetur leo lacus a mauris.'
 	}],
+	projects: [{
+		name: 'My Project',
+		logoUrl: "https://www.my-project.com/icon.png",
+		url: "https://www.my-project.com"
+	}],
 	interests: [{
 		name: "Beers",
 		icon: "fa-beer"

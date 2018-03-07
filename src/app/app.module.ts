@@ -25,6 +25,7 @@ import { BaseComponent } from './content/base/base.component';
 
 // directives
 import { InterestDirective } from './content/interest/interest.directive';
+import { ProjectDirective } from './content/project/project.directive';
 
 @NgModule({
 	entryComponents: [
@@ -40,7 +41,8 @@ import { InterestDirective } from './content/interest/interest.directive';
 		BaseComponent,
 
 		// directives
-		InterestDirective
+		InterestDirective,
+		ProjectDirective
 	],
 	imports: [
 		// angular

@@ -52,6 +52,12 @@ $green-app-theme: mat-light-theme($green-app-primary, $green-app-primary);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
 }
 
+.projects {
+	project {
+		display: inline-block;
+	}
+}
+
 .interests {
 	ul {
 		li {
