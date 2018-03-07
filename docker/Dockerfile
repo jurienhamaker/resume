@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y nginx
 RUN rm -rf /etc/nginx/conf.d/default.conf
 COPY docker/nginx.conf /etc/nginx/conf.d/angular.conf
 
-RUN yarn global add @angular/cli typescript@~2.3.4
+RUN yarn global add @angular/cli typescript@~2.4.2
 
 COPY package.json /opt/app/
 COPY docker/build.sh /opt/app/
