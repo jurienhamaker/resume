@@ -1,8 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "version": "1.0.0-beta.32-3",
-    "name": "SuperBuddyV2"
+    "version": "1.0.0",
+    "name": "Kings-Dev Resume"
   },
   "apps": [
     {
@@ -16,13 +16,12 @@
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "sb",
+      "prefix": "kings",
       "mobile": false,
       "styles": [
         "app/styles/global.scss"
       ],
-      "scripts": [
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "development": "environments/environment.dev.ts",
@@ -37,14 +36,12 @@
   },
   "lint": [
     {
-      "files": "src/**/*.ts",
       "project": "src/tsconfig.json",
-      "exclude": "**/node_modules/**/*"
+    	"exclude": "**/node_modules/**/*"
     },
     {
-      "files": "e2e/**/*.ts",
       "project": "e2e/tsconfig.json",
-      "exclude": "**/node_modules/**/*"
+    	"exclude": "**/node_modules/**/*"
     }
   ],
   "test": {
