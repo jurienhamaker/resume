@@ -81,6 +81,10 @@ export const environment = {
 		timespan: 'SEPT 2008 - JUN 2010'
 	}],
 	projects: [{
+		name: 'SuperBuddy',
+		logoUrl: "https://imgur.com/1UZJ1t7.png",
+		url: "https://superbuddy.nl"
+	}, {
 		name: 'Cynthia Vos',
 		logoUrl: "https://cynthia-vos.com/wp-content/uploads/2018/03/Color@100px-1.png",
 		url: "https://cynthia-vos.com"
